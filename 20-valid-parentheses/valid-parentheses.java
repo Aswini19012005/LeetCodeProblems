@@ -13,7 +13,7 @@ class Solution {
                 else return false;
             }
         } 
-        return (st.size()==0);  
+       return st.isEmpty();
     }
     static boolean pattern(char a,char b){
         if(a=='('&& b==')') return true;
