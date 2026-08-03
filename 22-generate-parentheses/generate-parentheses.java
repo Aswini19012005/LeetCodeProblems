@@ -1,33 +1,18 @@
 class Solution {
 
     public List<String> generateParenthesis(int n) {
-        List<String> ans = new ArrayList<>();
-
-        backtrack(ans, "", 0, 0, n);
-
-        return ans;
+     List<String>ans=new ArrayList<>();
+     generate(n,0,0,"",ans);
+     return ans;
     }
-
-    private void backtrack(List<String> ans,
-                           String curr,
-                           int open,
-                           int close,
-                           int n) {
-
-        // Base case
-        if (curr.length() == 2 * n) {
-            ans.add(curr);
+    public void generate(int n,int li,int r,String s,List<String> l){
+        if(r==n){
+            l.add(s);
             return;
         }
+        if(li < n) generate(n,li+1,r,s+"(",l);
+        if(r<li) generate(n,li,r+1,s+")",l);
 
-        // Add an opening bracket
-        if (open < n) {
-            backtrack(ans, curr + "(", open + 1, close, n);
-        }
 
-        // Add a closing bracket
-        if (close < open) {
-            backtrack(ans, curr + ")", open, close + 1, n);
-        }
     }
 }
