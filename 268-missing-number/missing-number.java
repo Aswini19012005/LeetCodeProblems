@@ -1,6 +1,6 @@
 class Solution {
     public int missingNumber(int[] nums) {
-       /* int n = nums.length;
+        int n = nums.length;
 
         int expected = n * (n + 1) / 2;
 
@@ -12,8 +12,8 @@ class Solution {
 
         return expected - actual;
     }
-}*/
-
+}
+/*
         HashSet<Integer> set = new HashSet<>();
 
         for (int num : nums) {
@@ -26,6 +26,6 @@ class Solution {
             }
         }
 
-        return -1; // Ye kabhi execute nahi hoga
+        return -1; 
     }
-}
+}*/
