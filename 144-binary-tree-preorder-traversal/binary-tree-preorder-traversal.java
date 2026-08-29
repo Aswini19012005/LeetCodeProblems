@@ -15,12 +15,8 @@
  */
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
-      
-       
         List<Integer>l1=new ArrayList<>();
         preorder(root,l1);
-
-        
         return l1;
     }
     public void preorder(TreeNode root,List<Integer> res ){
@@ -28,6 +24,5 @@ class Solution {
         res.add(root.val);
         preorder(root.left,res);
         preorder(root.right,res);
-
     }
 } 
