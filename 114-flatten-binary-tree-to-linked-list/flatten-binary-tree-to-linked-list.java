@@ -1,5 +1,5 @@
 /**
- * Definition for a binary tree node.
+ * Defin    `ition for a binary tree node.
  * public class TreeNode {
  *     int val;
  *     TreeNode left;
@@ -15,7 +15,23 @@
  */
 class Solution {
     public void flatten(TreeNode root) {
-        if(root==null)return;
+        if(root ==null)return;
+        flatten(root.left);
+        flatten(root.right);
+
+        TreeNode temp=root.right;
+        root.right=root.left;
+        root.left=null;
+
+        TreeNode curr=root;
+        while(curr.right!=null){
+            curr=curr.right;
+        }
+        curr.right=temp;
+    }
+}
+
+        /*if(root==null)return;
         ArrayList<TreeNode>arr=new ArrayList<>();
         dfs(root,arr);
         for(int i=0;i<arr.size()-1;i++){
@@ -33,5 +49,5 @@ class Solution {
         arr.add(root);
         dfs(root.left,arr);
         dfs(root.right,arr);
-    }
-}
+    }*/
+    
