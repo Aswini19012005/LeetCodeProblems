@@ -17,7 +17,7 @@ class Solution {
                 //right half is sorted
 
              else{
-                if(arr[mid]<target &&target<=arr[j]){
+                if(arr[mid]<=target &&target<=arr[j]){
                     i=mid+1;
                 }
                 else{
