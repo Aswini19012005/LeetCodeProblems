@@ -18,8 +18,6 @@ class Solution {
        
         List<Integer>l1=new ArrayList<>();
         inorder(root,l1);
-
-        
         return l1;
     }
     public void inorder(TreeNode root,List<Integer> res ){
